@@ -1,0 +1,195 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,300;1,400&display=swap");
+
+html {
+    scroll-behavior: smooth;
+    font-family: "Roboto", sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+.anhnen {
+    /* Ảnh nền của trang đầu tiên nếu bạn muốn đổi thì đổi tại đây */
+    /* background-image: url("../img/background.png"); */
+    /* background-image: linear-gradient(45deg,#3e32a8,#e310c7); */
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(45deg,#ffffff,#5648bf,#e310c7);
+    /* background: linear-gradient(45deg,#3e32a8,); */
+    /* background-repeat: no-repeat; */
+    /* margin: 0; */
+    /* padding: 0; */
+    background-size: 300% 300%;
+    /* background-position-y: -18rem; */
+    animation: color 12s ease-in-out infinite;
+}
+
+@keyframes color{
+    0%{
+        background-position: 0 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0 50%;
+    }
+}
+
+.snow,.snow:after,.snow:before{
+    content: "";
+    position: absolute;
+    top: -650px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image:
+    radial-gradient(4px 4px at 100px 50px, #fff, transparent),
+    radial-gradient(3px 3px at 200px 150px, #fff, transparent),
+    radial-gradient(4px 4px at 300px 250px, #fff, transparent),
+    radial-gradient(6px 6px at 400px 350px, #fff, transparent),
+    radial-gradient(4px 4px at 500px 20px, #fff, transparent),
+    radial-gradient(5px 5px at 50px 70px, #fff, transparent),
+    radial-gradient(4px 4px at 150px 110px, #fff, transparent),
+    radial-gradient(3px 3px at 250px 300px, #fff, transparent),
+    radial-gradient(6px 6px at 350px 270px, #fff, transparent),
+    radial-gradient(4px 4px at 170px 90px, #fff, transparent),
+    radial-gradient(3px 3px at 200px 490px, #fff, transparent),
+    radial-gradient(4px 4px at 310px 390px, #fff, transparent),
+    radial-gradient(6px 6px at 100px 290px, #fff, transparent),
+    radial-gradient(4px 4px at 350px 20px, #fff, transparent),
+    radial-gradient(5px 5px at 370px 400px, #fff, transparent),
+    radial-gradient(4px 4px at 220px 110px, #fff, transparent),
+    radial-gradient(3px 3px at 10px 700px, #fff, transparent),
+    radial-gradient(6px 6px at 170px 500px, #fff, transparent);
+    background-size: 650px 650px;
+    animation: snowAnim 21s linear;
+    animation-iteration-count: infinite;
+}
+.snow:after{
+    margin-left: -250px ;
+    opacity: 0,5;
+    filter: blur(2px);
+}
+.snow:before{
+    margin-left: -350px ;
+    opacity: 0,7;
+    filter: blur(1px);
+}
+
+
+
+.buttons {
+    display: flex;
+    column-gap: 3rem;
+    padding: 2rem;
+    z-index : 10;
+    position: relative;
+}
+
+.btn-bir:hover {
+    background-position: right center;
+    color: #fff;
+    text-decoration: none;
+}
+
+.btn-bir {
+    background-image: linear-gradient(
+        to right,
+        #314755 0%,
+        #26a0da 51%,
+        #314755 100%
+    );
+    margin: 10px;
+    padding: 15px 45px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+    display: block;
+}
+
+.btn-timeline {
+    background-image: linear-gradient(
+        to right,
+        #da22ff 0%,
+        #9733ee 51%,
+        #da22ff 100%
+    );
+}
+.btn-timeline {
+    margin: 10px;
+    padding: 15px 45px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+    display: block;
+}
+
+.btn-timeline:hover {
+    background-position: right center; 
+    color: #fff;
+    text-decoration: none;
+}
+
+.btn-gallery {
+    background-image: linear-gradient(
+        to right,
+        #02aab0 0%,
+        #00cdac 51%,
+        #02aab0 100%
+    );
+}
+.btn-gallery {
+    margin: 10px;
+    padding: 15px 45px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+    display: block;
+}
+
+.btn-gallery:hover {
+    background-position: right center; /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
+}
+
+.cover {
+    width: 240px;
+    height: 240px;
+    background-image: url(Baogo.jpg);
+    /* background-size: 100%; */
+    background-repeat: no-repeat;
+    background-size: 100%;
+    
+    box-shadow: 0 0 30px #eee;
+    position: absolute;
+    margin-top: 3rem;
+    left: calc(50% - 100px);
+  
+    border-radius: 120px;
+    border: 1,5px black;
+    background-position: 0px;
+    z-index : -1;
+}
+@keyframes snowAnim{
+    from{
+        transform: translateY(0);
+    }
+    to{
+        transform: translateY(650px);
+    }
+}
